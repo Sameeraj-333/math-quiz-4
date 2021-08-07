@@ -15,8 +15,8 @@ function send(){
     num2 = document.getElementById("number2").value;
     answer = parseInt(num1) * parseInt(num2);
     document.getElementById("output").innerHTML = "<h1>" + "Q:" + "</h1>" + "<h1>" + num1 + "</h1>"  + "<h1>" + " X " + "</h1> " + "<h1>" + num2 + "</h1>"+ "<br>" + "<h3>Answer: "  + "<input type='number' id='input_check_box'>" + "</input>" + "<button class='btn btn-success' onClick='check()'>" + "<h3>" + "Submit" + "</h3>" + "</button>";
-    document.getElementById("number1").innerHTML = "";
-    document.getElementById("number2").innerHTML = "";
+    document.getElementById("number1").value = "";
+    document.getElementById("number2").value = "";
 
 }
 question_turn = "player1";
@@ -50,10 +50,10 @@ function check() {
         document.getElementById("player_answer").innerHTML = player_2_name;
     
     }else{
-      question_turn = "player1"
+      answer_turn = "player1"
       document.getElementById("player_answer").innerHTML = player_1_name;
       
     }
 
-    document.getElementById("input_check_box").innerHTML = ""
+    document.getElementById("input_check_box").value = "";
 }
